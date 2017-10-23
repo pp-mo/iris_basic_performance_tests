@@ -1,0 +1,139 @@
+
+
+  Running 'PP load (plain)' :
+    repeat #1 .. took     1.287367 ...
+    repeat #2 .. took     1.258558 ...
+    repeat #3 .. took     1.258522 ...
+
+
+Test                        "PP load (plain)" :     1.258522 seconds
+
+
+
+  Running 'PP load (structured)' :
+    repeat #1 .. took     0.928154 ...
+    repeat #2 .. took     0.975540 ...
+    repeat #3 .. took     0.949106 ...
+
+
+Test                   "PP load (structured)" :     0.949106 seconds
+
+
+
+  Running 'PP data load' :
+    repeat #1 .. took     0.257403 ...
+    repeat #2 .. took     0.000127 ...
+    repeat #3 .. took     0.000092 ...
+
+
+Test                           "PP data load" :     0.000092 seconds
+
+
+
+  Running 'Fieldsfile load (plain)' :
+    repeat #1 .. /home/h05/itpp/git/iris/iris_main/lib/iris/fileformats/rules.py:334: UserWarning: Unable to create instance of HybridHeightFactory. The source data contains no field(s) for 'orography'.
+  warnings.warn(msg.format(factory=factory_name))
+took     5.813521 ...
+    repeat #2 .. took     5.771976 ...
+    repeat #3 .. took     5.768564 ...
+
+
+Test                "Fieldsfile load (plain)" :     5.768564 seconds
+
+
+
+  Running 'Fieldsfile load (structured)' :
+    repeat #1 .. took     2.548238 ...
+    repeat #2 .. took     2.586585 ...
+    repeat #3 .. took     2.562154 ...
+
+
+Test           "Fieldsfile load (structured)" :     2.562154 seconds
+
+
+
+  Running 'Fieldsfile data load' :
+    repeat #1 .. took     1.324207 ...
+    repeat #2 .. took     0.000022 ...
+    repeat #3 .. took     0.000018 ...
+
+
+Test                   "Fieldsfile data load" :     0.000018 seconds
+
+
+
+  Running 'NetCDF load (plain)' :
+    repeat #1 .. /home/h05/itpp/git/iris/iris_main/lib/iris/fileformats/cf.py:798: UserWarning: Missing CF-netCDF measure variable u'areacella', referenced by netCDF variable u'tas'
+  warnings.warn(message % (variable_name, nc_var_name))
+took     0.253869 ...
+    repeat #2 .. took     0.237326 ...
+    repeat #3 .. took     0.235671 ...
+
+
+Test                    "NetCDF load (plain)" :     0.235671 seconds
+
+
+
+  Running 'NetCDF data load' :
+    repeat #1 .. took     2.060282 ...
+    repeat #2 .. took     0.000018 ...
+    repeat #3 .. took     0.000011 ...
+
+
+Test                       "NetCDF data load" :     0.000011 seconds
+
+
+
+  Running 'PP save to PP' :
+    repeat #1 .. took     2.584470 ...
+    repeat #2 .. took     2.558611 ...
+    repeat #3 .. took     2.550973 ...
+
+
+Test                          "PP save to PP" :     2.550973 seconds
+
+
+
+  Running 'PP save to NetCDF' :
+    repeat #1 .. took     0.712963 ...
+    repeat #2 .. took     0.710203 ...
+    repeat #3 .. took     0.710507 ...
+
+
+Test                      "PP save to NetCDF" :     0.710507 seconds
+
+
+
+  Running 'NetCDF save to NetCDF' :
+    repeat #1 .. took     2.288187 ...
+    repeat #2 .. took     2.283244 ...
+    repeat #3 .. took     2.305136 ...
+
+
+Test                  "NetCDF save to NetCDF" :     2.305136 seconds
+
+
+
+  Running 'NetCDF save to PP' :
+    repeat #1 .. took    48.952037 ...
+    repeat #2 .. took    49.022974 ...
+    repeat #3 .. took    49.043893 ...
+
+
+Test                      "NetCDF save to PP" :    49.043893 seconds
+
+
+
+Results summary:
+Test                        "PP load (plain)" :     1.258522 seconds
+Test                   "PP load (structured)" :     0.949106 seconds
+Test                           "PP data load" :     0.000092 seconds
+Test                "Fieldsfile load (plain)" :     5.768564 seconds
+Test           "Fieldsfile load (structured)" :     2.562154 seconds
+Test                   "Fieldsfile data load" :     0.000018 seconds
+Test                    "NetCDF load (plain)" :     0.235671 seconds
+Test                       "NetCDF data load" :     0.000011 seconds
+Test                          "PP save to PP" :     2.550973 seconds
+Test                      "PP save to NetCDF" :     0.710507 seconds
+Test                  "NetCDF save to NetCDF" :     2.305136 seconds
+Test                      "NetCDF save to PP" :    49.043893 seconds
