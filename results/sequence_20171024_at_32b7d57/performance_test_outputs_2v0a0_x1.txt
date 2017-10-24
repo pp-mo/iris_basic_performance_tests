@@ -1,0 +1,131 @@
+
+
+  Running 'PP load (plain)' :
+    repeat #1 .. took     1.277651 ...
+    repeat #2 .. took     1.220613 ...
+    repeat #3 .. took     1.222464 ...
+
+
+Test                        "PP load (plain)" :     1.222464 seconds
+
+
+
+  Running 'PP load (structured)' :
+    repeat #1 .. took     0.896730 ...
+    repeat #2 .. took     0.927655 ...
+    repeat #3 .. took     0.927803 ...
+
+
+Test                   "PP load (structured)" :     0.927803 seconds
+
+
+
+  Running 'PP data load' :
+    repeat #1 .. took     0.304466 ...
+    repeat #2 .. took     0.304901 ...
+    repeat #3 .. took     0.295000 ...
+    repeat #4 .. took     0.294316 ...
+
+
+Test                           "PP data load" :     0.294316 seconds
+
+
+
+  Running 'Fieldsfile load (plain)' :
+    repeat #1 .. /home/h05/itpp/git/iris/iris_main/lib/iris/fileformats/rules.py:946: UserWarning: Unable to create instance of HybridHeightFactory. The source data contains no field(s) for 'orography'.
+  warnings.warn(msg.format(factory=factory_name))
+took     5.716361 ...
+    repeat #2 .. took     5.659391 ...
+    repeat #3 .. took     5.652464 ...
+
+
+Test                "Fieldsfile load (plain)" :     5.652464 seconds
+
+
+
+  Running 'Fieldsfile load (structured)' :
+    repeat #1 .. took     2.484248 ...
+    repeat #2 .. took     2.494358 ...
+    repeat #3 .. took     2.450629 ...
+
+
+Test           "Fieldsfile load (structured)" :     2.450629 seconds
+
+
+
+  Running 'Fieldsfile data load' :
+    repeat #1 .. took     1.316865 ...
+    repeat #2 .. took     1.313490 ...
+    repeat #3 .. took     1.316934 ...
+    repeat #4 .. took     1.313001 ...
+
+
+Test                   "Fieldsfile data load" :     1.313001 seconds
+
+
+
+  Running 'NetCDF load (plain)' :
+    repeat #1 .. /home/h05/itpp/git/iris/iris_main/lib/iris/fileformats/cf.py:798: UserWarning: Missing CF-netCDF measure variable u'areacella', referenced by netCDF variable u'tas'
+  warnings.warn(message % (variable_name, nc_var_name))
+took     0.232546 ...
+    repeat #2 .. took     0.215848 ...
+    repeat #3 .. took     0.215716 ...
+    repeat #4 .. took     0.215664 ...
+
+
+Test                    "NetCDF load (plain)" :     0.215664 seconds
+
+
+
+  Running 'NetCDF data load' :
+    repeat #1 .. took     2.004037 ...
+    repeat #2 .. took     2.725339 ...
+    repeat #3 .. took     2.291028 ...
+    repeat #4 .. took     2.832337 ...
+
+
+Test                       "NetCDF data load" :     2.832337 seconds
+
+
+
+  Running 'PP save to PP' :
+    repeat #1 .. took     3.460991 ...
+    repeat #2 .. took     3.359363 ...
+    repeat #3 .. took     3.368441 ...
+
+
+Test                          "PP save to PP" :     3.368441 seconds
+
+
+
+  Running 'PP save to NetCDF' :
+    repeat #1 .. took     0.818022 ...
+    repeat #2 .. took     0.819508 ...
+    repeat #3 .. took     0.819585 ...
+
+
+Test                      "PP save to NetCDF" :     0.819585 seconds
+
+
+
+  Running 'NetCDF save to NetCDF' :
+    repeat #1 .. took     2.307691 ...
+    repeat #2 .. took     2.140815 ...
+    repeat #3 .. took     1.975943 ...
+Traceback (most recent call last):
+  File "standard_performance_tests.py", line 174, in <module>
+    run_tests()
+  File "standard_performance_tests.py", line 164, in run_tests
+    do_save, [nc_save_cube, 'tmp.nc'])
+  File "standard_performance_tests.py", line 100, in exercise
+    atol=abstol, rtol=reltol)
+  File "/data/local/itpp/miniconda/envs/dask_speedchecks/lib/python2.7/site-packages/numpy/testing/utils.py", line 1395, in assert_allclose
+    verbose=verbose, header=header, equal_nan=equal_nan)
+  File "/data/local/itpp/miniconda/envs/dask_speedchecks/lib/python2.7/site-packages/numpy/testing/utils.py", line 778, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=0.08, atol=0.001
+
+(mismatch 100.0%)
+ x: array(2.140815)
+ y: array(1.975943)

@@ -1,0 +1,145 @@
+/home/h05/itpp/git/iris/iris_main/lib/iris/__init__.py:228: IrisDeprecation: the 'Future' object property 'strict_grib_load' is now deprecated. Please remove code which uses this.  This is because "iris.fileformats.grib" is now deprecated :  Please install the "iris_grib" package instead.
+  warn_deprecated(msg.format(name, reason))
+
+
+  Running 'PP load (plain)' :
+    repeat #1 .. took     1.057864 ...
+    repeat #2 .. took     1.056503 ...
+    repeat #3 .. took     1.023019 ...
+
+
+Test                        "PP load (plain)" :     1.023019 seconds
+
+
+
+  Running 'PP load (structured)' :
+    repeat #1 .. took     0.796691 ...
+    repeat #2 .. took     0.775753 ...
+    repeat #3 .. took     0.800567 ...
+
+
+Test                   "PP load (structured)" :     0.800567 seconds
+
+
+
+  Running 'PP data load' :
+    repeat #1 .. took     0.226507 ...
+    repeat #2 .. took     0.226832 ...
+    repeat #3 .. took     0.218033 ...
+    repeat #4 .. took     0.217066 ...
+
+
+Test                           "PP data load" :     0.217066 seconds
+
+
+
+  Running 'Fieldsfile load (plain)' :
+    repeat #1 .. /home/h05/itpp/git/iris/iris_main/lib/iris/fileformats/rules.py:946: UserWarning: Unable to create instance of HybridHeightFactory. The source data contains no field(s) for 'orography'.
+  warnings.warn(msg.format(factory=factory_name))
+took     4.775620 ...
+    repeat #2 .. took     4.786275 ...
+    repeat #3 .. took     4.787563 ...
+
+
+Test                "Fieldsfile load (plain)" :     4.787563 seconds
+
+
+
+  Running 'Fieldsfile load (structured)' :
+    repeat #1 .. took     1.938349 ...
+    repeat #2 .. took     1.981236 ...
+    repeat #3 .. took     1.944243 ...
+
+
+Test           "Fieldsfile load (structured)" :     1.944243 seconds
+
+
+
+  Running 'Fieldsfile data load' :
+    repeat #1 .. took     1.255477 ...
+    repeat #2 .. took     1.254943 ...
+    repeat #3 .. took     1.254487 ...
+    repeat #4 .. took     1.256854 ...
+
+
+Test                   "Fieldsfile data load" :     1.256854 seconds
+
+
+
+  Running 'NetCDF load (plain)' :
+    repeat #1 .. /home/h05/itpp/git/iris/iris_main/lib/iris/fileformats/cf.py:798: UserWarning: Missing CF-netCDF measure variable u'areacella', referenced by netCDF variable u'tas'
+  warnings.warn(message % (variable_name, nc_var_name))
+took     0.240334 ...
+    repeat #2 .. took     0.213814 ...
+    repeat #3 .. took     0.214271 ...
+    repeat #4 .. took     0.216732 ...
+
+
+Test                    "NetCDF load (plain)" :     0.216732 seconds
+
+
+
+  Running 'NetCDF data load' :
+    repeat #1 .. took     2.272532 ...
+    repeat #2 .. took     2.814929 ...
+    repeat #3 .. took     2.195869 ...
+    repeat #4 .. took     2.808193 ...
+
+
+Test                       "NetCDF data load" :     2.808193 seconds
+
+
+
+  Running 'PP save to PP' :
+    repeat #1 .. took     2.524543 ...
+    repeat #2 .. took     2.489367 ...
+    repeat #3 .. took     2.487153 ...
+
+
+Test                          "PP save to PP" :     2.487153 seconds
+
+
+
+  Running 'PP save to NetCDF' :
+    repeat #1 .. took     0.521674 ...
+    repeat #2 .. took     0.516413 ...
+    repeat #3 .. took     0.517366 ...
+
+
+Test                      "PP save to NetCDF" :     0.517366 seconds
+
+
+
+  Running 'NetCDF save to NetCDF' :
+    repeat #1 .. took     2.081585 ...
+    repeat #2 .. took     2.085302 ...
+    repeat #3 .. took     2.076691 ...
+
+
+Test                  "NetCDF save to NetCDF" :     2.076691 seconds
+
+
+
+  Running 'NetCDF save to PP' :
+    repeat #1 .. took    63.986111 ...
+    repeat #2 .. took    64.362249 ...
+    repeat #3 .. took    64.109035 ...
+
+
+Test                      "NetCDF save to PP" :    64.109035 seconds
+
+
+
+Results summary:
+Test                        "PP load (plain)" :     1.023019 seconds
+Test                   "PP load (structured)" :     0.800567 seconds
+Test                           "PP data load" :     0.217066 seconds
+Test                "Fieldsfile load (plain)" :     4.787563 seconds
+Test           "Fieldsfile load (structured)" :     1.944243 seconds
+Test                   "Fieldsfile data load" :     1.256854 seconds
+Test                    "NetCDF load (plain)" :     0.216732 seconds
+Test                       "NetCDF data load" :     2.808193 seconds
+Test                          "PP save to PP" :     2.487153 seconds
+Test                      "PP save to NetCDF" :     0.517366 seconds
+Test                  "NetCDF save to NetCDF" :     2.076691 seconds
+Test                      "NetCDF save to PP" :    64.109035 seconds
