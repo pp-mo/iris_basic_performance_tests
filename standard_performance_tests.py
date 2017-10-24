@@ -72,7 +72,7 @@ _DEFAULT_REPS = 3
 
 REPORT_LINES = []
 
-def exercise(description, method, args, repeats=None, abstol=0.001, reltol=0.05):
+def exercise(description, method, args, repeats=None, abstol=0.001, reltol=0.08):
     if repeats is None:
         repeats = _DEFAULT_REPS
 
@@ -131,7 +131,7 @@ def run_tests():
              do_structured_load, [pp_filespec])
 
     exercise('PP data load',
-             do_data_load, [pp_cubes])
+             do_data_load, [pp_cubes], repeats=4, reltol=0.07)
 
     ff_filespec = '/data/local/dataZoo/FF/ff_variants/ff_64.ff'
 
@@ -142,18 +142,18 @@ def run_tests():
              do_structured_load, [ff_filespec])
 
     exercise('Fieldsfile data load',
-             do_data_load, [ff_cubes[29:30]])
+             do_data_load, [ff_cubes[29:30]], repeats=4, reltol=0.07)
 
     nc_filespec = (
         '/data/local/dataZoo/netCDF/largeFile/'
         'tas_day_HadGEM2-ES_historical_r1i1p1_18591201-20051130.nc')
 
     nc_cubes = exercise('NetCDF load (plain)',
-                        do_load, [nc_filespec])
+                        do_load, [nc_filespec], repeats=4, reltol=0.15)
 
     nc_dataload_cubes_list = [nc_cubes[0][:5000]]
     exercise('NetCDF data load',
-             do_data_load, [nc_dataload_cubes_list])
+             do_data_load, [nc_dataload_cubes_list], repeats=4, reltol=0.4)
 
     nc_save_cube = nc_cubes[0][:5000]
     exercise('PP save to PP',
