@@ -43,7 +43,8 @@ def do_structured_load(filespec):
 
 
 def _cube_data(cube):
-    return cube.data
+    # Note: don't realise the original cube !
+    return cube.copy().data
 
 
 def do_data_load(cubes_list):
