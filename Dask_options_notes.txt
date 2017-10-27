@@ -1,0 +1,25 @@
+NOTICING
+
+when testing old synchronous version, CPU swap over but total loading is always <= 100%
+
+when testing v with no dask-setopts, certain operations show evidence of parallel benefit :
+  pp load plain - NO
+  pp struct load - NO
+  pp data load - NO (but lots of switching ??)
+
+  FF load plain - NO
+  FF struct load - NO
+  FF data load - YES
+  FF means calc - YES
+  
+  NC load - NO
+  NC data load - ?YES
+  NC mean calc - YES
+
+  save PP 2 PP - NO
+  save PP 2 NC - 
+  save NC 2 NC - 
+  save NC to PP - ~0 ? noisy?
+
+
+  
