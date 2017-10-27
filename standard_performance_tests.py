@@ -157,7 +157,8 @@ def run_tests():
                         do_load, [ff_filespec])
 
     exercise('Fieldsfile load (structured)',
-             do_structured_load, [ff_filespec])
+             do_structured_load, [ff_filespec],
+             reltol=0.15)
 
     exercise('Fieldsfile data load',
              do_data_load, [ff_cubes[29:30]],

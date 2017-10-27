@@ -22,4 +22,25 @@ when testing v with no dask-setopts, certain operations show evidence of paralle
   save NC to PP - ~0 ? noisy?
 
 
+ 
+RECHECKED against version which disables chunksize retriction :
+  --> results/daskopts_first_20171027/performance_test_outputs_20617ecbb_BIGCHUNKS_WITHOUT_daskdefaults_x1.txt
+
+  pp load plain - NO
+  pp struct load - NO
+  pp data load - NO (but lots of switching ??)
+
+  FF load plain - NO
+  FF struct load - ?YES
+  FF data load - YES
+  FF means calc - YES
   
+  NC load - NO
+  NC data load - ??NO
+  NC mean calc - ??NO
+
+  save PP 2 PP - NO ?noisy
+  save PP 2 NC - NO ? noisy
+  save NC 2 NC - NO ? noisy
+  save NC to PP - ~0 ? noisy?
+
